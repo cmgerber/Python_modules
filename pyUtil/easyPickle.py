@@ -7,7 +7,7 @@ def save_object(obj, filename):
         pickle.dump(obj, output, pickle.HIGHEST_PROTOCOL)
 
 
-def open_object(obj, filename):
+def open_object(filename):
     '''Use this to open pickles'''
     with open(filename, 'rb') as input:
-        obj = pickle.load(input)
+        return pickle.load(input)
